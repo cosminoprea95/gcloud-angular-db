@@ -26,3 +26,9 @@ steps:
   args:
   - 'push'
   - 'gcr.io/kube-tutorial-194819-267520/demo-cicd:2'
+- name: 'gcr.io/cloud-builders/kubectl'
+  id: Deploy
+  args:
+  - 'apply'
+  - '-f'
+  - 'kubernetes.yml'
