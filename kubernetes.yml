@@ -29,12 +29,11 @@ spec:
         app: demo-cicd
     spec:
       containers:
-      - env:
-        imagePullPolicy: Always
       - name: demo-cicd
         image: gcr.io/kube-tutorial-194819-267520/demo-cicd:latest
         ports:
         - containerPort: 3000
+        imagePullPolicy: Always
 ---
 kind: Service
 apiVersion: v1
