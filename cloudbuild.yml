@@ -35,3 +35,12 @@ steps:
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=europe-west4-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=istio-cluster'
+- name: 'gcr.io/cloud-builders/kubectl'
+  id: Fetch changes
+  args:
+  - 'rollout'
+  - 'restart'
+  - 'deployment/demo-cicd'
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=europe-west4-b'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=istio-cluster'
