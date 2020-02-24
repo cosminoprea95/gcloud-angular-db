@@ -32,7 +32,7 @@ spec:
       - name: demo-cicd
         image: gcr.io/kube-tutorial-194819-267520/demo-cicd:2
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
 ---
 kind: Service
 apiVersion: v1
@@ -44,6 +44,6 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 8080
+    targetPort: 3000
   type: LoadBalancer
 
