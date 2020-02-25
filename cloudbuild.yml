@@ -15,7 +15,7 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/kube-tutorial-194819-267520/demo-cicd:latest'
+  - 'gcr.io/cirrus-initial-project/demo-cicd:latest'
   - '.'
 
 # This step pushes the image to Container Registry
@@ -25,7 +25,7 @@ steps:
   id: Push
   args:
   - 'push'
-  - 'gcr.io/kube-tutorial-194819-267520/demo-cicd:latest'
+  - 'gcr.io/cirrus-initial-project/demo-cicd:latest'
 - name: 'gcr.io/cloud-builders/kubectl'
   id: Deploy
   args:

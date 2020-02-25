@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: demo-cicd
-        image: gcr.io/kube-tutorial-194819-267520/demo-cicd:latest
+        image: gcr.io/cirrus-initial-project/demo-cicd:latest
         ports:
         - containerPort: 3000
         imagePullPolicy: Always
