@@ -16,6 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo-cicd
+  namespace: frontend-demo
   labels:
     app: demo-cicd
 spec:
@@ -39,6 +40,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: demo-cicd
+  namespace: frontend-demo
 spec:
   selector:
     app: demo-cicd
