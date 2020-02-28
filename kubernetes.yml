@@ -35,8 +35,8 @@ spec:
         - containerPort: 3000
         imagePullPolicy: Always
 ---
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: demo-cicd
 spec:
